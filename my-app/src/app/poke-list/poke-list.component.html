@@ -1,0 +1,8 @@
+<p>Filter: </p>
+<input [(ngModel)]="filterN" (change)="filter()">
+<p>Ergebnisse</p>
+<ul
+   *ngFor='let pokemon of pokemonList;let i=index'>
+   <a [hidden]='!pokemon.name.includes(filterN)' routerLink='{{i+1}}'>{{ pokemon.name }}</a>
+
+</ul>
