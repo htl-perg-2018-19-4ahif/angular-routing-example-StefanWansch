@@ -36,9 +36,7 @@ export class PokeListComponent implements OnInit {
     this.pokemonList = (await this.httpClient.get<IPokemonList>(this.url).toPromise()).results;
   }
   
-  public filter(filter){
-    this.filterN=filter;
-  }
+  
 
    
 }

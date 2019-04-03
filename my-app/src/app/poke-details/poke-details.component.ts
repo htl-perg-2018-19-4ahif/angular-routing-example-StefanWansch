@@ -20,7 +20,7 @@ interface IAbilities{
 })
 export class PokeDetailsComponent implements OnInit {
   public idP:number; 
-  public details:IDetails;
+  public details:IDetails={name:"",abilities:[]};
   public url="https://pokeapi.co/api/v2/pokemon/"
   constructor(private httpClient:HttpClient,private acRoute: ActivatedRoute) { }
 
